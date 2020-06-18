@@ -1,0 +1,58 @@
+\input{header}
+%\includeonly{kapitel/methoden}
+
+
+\begin{document}
+% -------------------------------------------------------------------
+% Titelseite, Inhaltsverzeichnis, Abbildungsverzeichnis, usw.
+
+\include{kapitel/titelseite} % <- Hier sollten Name/Titel/usw. eingetragen werden!
+
+\pagenumbering{roman}
+\tableofcontents
+%\addtocontents{toc}{~\hfill\textbf{Seite}\par} % Seite über Seitenzahlen im TOC
+\listoffigures
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoftables
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+%\listofalgorithms
+% ...
+\clearpage
+\pagenumbering{arabic}
+% -------------------------------------------------------------------
+
+% -------------------------------------------------------------------
+%% Einleitung
+\include{kapitel/einleitung2}
+%% Hauptteil
+
+\include{kapitel/k2} % Kapitel 2: Einführung in den elektronischen Markt
+\include{kapitel/k3} % Kapitel 3: Theorie der Sportwetten
+\include{kapitel/k4} % Kapitel 4: Effizienz von Fußballwettquoten
+
+\include{kapitel/fazit}
+
+% ... hier können weitere kapitel eingefügt werden!
+% -------------------------------------------------------------------
+
+% -------------------------------------------------------------------
+% Anhang
+%\appendix
+%\include{kapitel/anhang}
+% -------------------------------------------------------------------
+
+% -------------------------------------------------------------------
+% Literaturverzeichnis
+%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\bibliographystyle{natdin}
+\bibliography{literatur/literatur}
+%\include{literatur/literatur.bib}
+
+% -------------------------------------------------------------------
+
+% -------------------------------------------------------------------
+% Erklaerung (nicht nötig für Seminararbeiten)
+%\include{kapitel/erklaerung}
+% -------------------------------------------------------------------
+
+\end{document}

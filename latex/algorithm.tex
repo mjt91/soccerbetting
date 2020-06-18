@@ -1,0 +1,45 @@
+\documentclass[paper=a4]{scrreprt}
+
+% Mathematische Paktete
+\usepackage{amsmath,amssymb,bm,bbm}         % Formelsetzung und mathematischen Symbole
+\usepackage[amsmath,thmmarks]{ntheorem}     % Theorem-Umgebungen, alternativ: 'amsthm'
+
+% Algorithmus
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+
+
+\begin{document}
+
+
+\begin{algorithm}
+\caption{Arbitrage}\label{alg:arbitrage}
+\begin{algorithmic}[1]
+\Require list of odds $q_{jk}$ for all bookmakers $j \in J=\{1,\dots,n\}$ where $ |J| \geq 2 $
+\Ensure list of indices $j$ for all outcomes $k$
+\Procedure{Find arbitrage opportunities }{$j,k$}
+\ForAll{$k=H,D,A$}
+	% \For{$j=1$ to $n$}
+	\ForAll{bookmakers $j \in J$}
+		return the highst odd $q_{jk}$ for every outcome $k$
+	\EndFor
+	\State define $\omega_k \gets \max{q_{jk}}$
+\EndFor
+\If{$\sum_{k}^{}{\omega_k} < 1$}
+	\State \textbf{return} $(j,k)$ for all outcomes $k$
+	\Else
+		\State \textbf{return} $-1$
+\EndIf
+\EndProcedure
+\end{algorithmic}
+
+
+\end{algorithm}
+
+
+
+
+\end{document}
